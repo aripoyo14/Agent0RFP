@@ -4,80 +4,80 @@ export const sampleTalentProfile: TalentProfile = {
   name: "鈴木一郎",
   skillTags: ["GX投資", "スタートアップエコシステム", "脱炭素技術", "技術経営", "ESG投資", "グリーンテック"],
   currentInfo: {
-    exchange_date: "2025年7月26日",
+    exchange_date: "2025/07/26",
     company_name: "GXベンチャーズ株式会社",
     current_department: "投資部",
     current_title: "投資マネージャー"
   },
   pastBusinessCards: [
     {
-      exchange_date: "2022年3月15日",
+      exchange_date: "2022/03/15",
       company_name: "三菱商事株式会社",
       department_at_time: "新規事業開発部",
       title_at_time: "主任"
     },
     {
-      exchange_date: "2020年8月10日",
+      exchange_date: "2020/08/10",
       company_name: "マッキンゼー・アンド・カンパニー",
       department_at_time: "コンサルティング部",
       title_at_time: "アソシエイト"
     },
     {
-      exchange_date: "2019年4月22日",
+      exchange_date: "2019/04/22",
       company_name: "ソフトバンクグループ株式会社",
       department_at_time: "投資部門",
       title_at_time: "投資アナリスト"
     },
     {
-      exchange_date: "2018年11月8日",
+      exchange_date: "2018/11/08",
       company_name: "野村証券株式会社",
       department_at_time: "M&Aアドバイザリー部",
       title_at_time: "アソシエイト"
     },
     {
-      exchange_date: "2017年6月14日",
+      exchange_date: "2017/06/14",
       company_name: "株式会社リクルート",
       department_at_time: "新規事業推進室",
       title_at_time: "企画担当"
     },
     {
-      exchange_date: "2016年9月30日",
+      exchange_date: "2016/09/30",
       company_name: "楽天株式会社",
       department_at_time: "戦略企画部",
       title_at_time: "マネージャー"
     },
     {
-      exchange_date: "2015年12月3日",
+      exchange_date: "2015/12/03",
       company_name: "株式会社電通",
       department_at_time: "デジタルマーケティング局",
       title_at_time: "プランナー"
     },
     {
-      exchange_date: "2014年7月18日",
+      exchange_date: "2014/07/18",
       company_name: "グーグル合同会社",
       department_at_time: "プロダクト開発部",
       title_at_time: "プロダクトマネージャー"
     },
     {
-      exchange_date: "2013年2月25日",
+      exchange_date: "2013/02/25",
       company_name: "株式会社サイバーエージェント",
       department_at_time: "AI事業部",
       title_at_time: "エンジニア"
     },
     {
-      exchange_date: "2012年5月16日",
+      exchange_date: "2012/05/16",
       company_name: "LINE株式会社",
       department_at_time: "プラットフォーム開発部",
       title_at_time: "シニアエンジニア"
     },
     {
-      exchange_date: "2011年10月7日",
+      exchange_date: "2011/10/07",
       company_name: "株式会社メルカリ",
       department_at_time: "事業開発部",
       title_at_time: "ディレクター"
     },
     {
-      exchange_date: "2010年8月12日",
+      exchange_date: "2010/08/12",
       company_name: "DeNA Co., Ltd.",
       department_at_time: "ゲーム事業部",
       title_at_time: "プロデューサー"
@@ -192,145 +192,145 @@ export const sampleTalentProfile: TalentProfile = {
   activities: [
     {
       category: "ニュース",
-      date: "2025.07.25",
+      date: "2025/07/25",
       title: "GXベンチャーズが脱炭素技術スタートアップに100億円投資を発表",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.07.20",
+      date: "2025/07/20",
       title: "Tokyo Startup Ecosystem Summit 2025でキーノート講演",
       details: "詳細を見る",
     },
     {
       category: "論文",
-      date: "2025.07.15",
+      date: "2025/07/15",
       title: "「日本のGX投資における政策金融の役割」（日本経済研究センター紀要）",
       details: "詳細を見る",
     },
     {
       category: "書籍",
-      date: "2025.07.10",
+      date: "2025/07/10",
       title: "『脱炭素ビジネスの未来』（日経BP社）に寄稿",
       details: "詳細を見る",
     },
     {
       category: "ニュース",
-      date: "2025.07.05",
+      date: "2025/07/05",
       title: "日経新聞「AI・データ活用推進の課題と展望」インタビュー記事掲載",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.06.30",
+      date: "2025/06/30",
       title: "グリーンテック・カンファレンス2025パネリスト参加",
       details: "詳細を見る",
     },
     {
       category: "論文",
-      date: "2025.06.25",
+      date: "2025/06/25",
       title: "「スタートアップエコシステムにおける投資戦略の変化」（ベンチャー学会誌）",
       details: "詳細を見る",
     },
     {
       category: "ニュース",
-      date: "2025.06.20",
+      date: "2025/06/20",
       title: "TechCrunch Japan「デジタル人材育成の新アプローチ」寄稿記事",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.06.15",
+      date: "2025/06/15",
       title: "ヘルスケア・イノベーション・サミット基調講演",
       details: "詳細を見る",
     },
     {
       category: "書籍",
-      date: "2025.06.10",
+      date: "2025/06/10",
       title: "『テクノロジーが拓く地方創生の可能性』（東洋経済新報社）共著",
       details: "詳細を見る",
     },
     {
       category: "論文",
-      date: "2025.06.05",
+      date: "2025/06/05",
       title: "「サイバーセキュリティ投資の経済効果分析」（情報セキュリティ学会論文誌）",
       details: "詳細を見る",
     },
     {
       category: "ニュース",
-      date: "2025.06.01",
+      date: "2025/06/01",
       title: "Forbes Japan「Web3が変える産業構造」特集記事に登場",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.05.28",
+      date: "2025/05/28",
       title: "量子コンピューティング研究会での招待講演",
       details: "詳細を見る",
     },
     {
       category: "論文",
-      date: "2025.05.22",
+      date: "2025/05/22",
       title: "「宇宙産業における民間投資の動向と課題」（宇宙利用促進センター研究報告）",
       details: "詳細を見る",
     },
     {
       category: "ニュース",
-      date: "2025.05.18",
+      date: "2025/05/18",
       title: "日刊工業新聞「次世代モビリティへの投資戦略」インタビュー",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.05.15",
+      date: "2025/05/15",
       title: "バイオテクノロジー・フォーラム2025でパネル討論参加",
       details: "詳細を見る",
     },
     {
       category: "書籍",
-      date: "2025.05.10",
+      date: "2025/05/10",
       title: "『エネルギー革命とスタートアップ投資』（中央経済社）監修",
       details: "詳細を見る",
     },
     {
       category: "論文",
-      date: "2025.05.05",
+      date: "2025/05/05",
       title: "「持続可能な投資戦略とESG評価手法」（サステナビリティ経営学会誌）",
       details: "詳細を見る",
     },
     {
       category: "ニュース",
-      date: "2025.05.01",
+      date: "2025/05/01",
       title: "東洋経済オンライン「GX投資の現在地と今後の展望」寄稿",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.04.25",
+      date: "2025/04/25",
       title: "Japan Venture Awards 2025審査員として参加",
       details: "詳細を見る",
     },
     {
       category: "論文",
-      date: "2025.04.20",
+      date: "2025/04/20",
       title: "「イノベーション政策と民間投資の相互作用」（政策研究大学院大学紀要）",
       details: "詳細を見る",
     },
     {
       category: "ニュース",
-      date: "2025.04.15",
+      date: "2025/04/15",
       title: "週刊ダイヤモンド「脱炭素スタートアップ投資の最前線」特集記事",
       details: "詳細を見る",
     },
     {
       category: "イベント",
-      date: "2025.04.10",
+      date: "2025/04/10",
       title: "アジア・パシフィック・ベンチャー・サミットで基調講演",
       details: "詳細を見る",
     },
     {
       category: "書籍",
-      date: "2025.04.05",
+      date: "2025/04/05",
       title: "『デジタル変革時代の投資哲学』（日本経済新聞出版）に章を執筆",
       details: "詳細を見る",
     }
@@ -402,6 +402,10 @@ export const sampleTalentProfile: TalentProfile = {
       department: "資源エネルギー庁新エネルギー課"
     }
   ],
+  contactInfo: {
+    email: "suzuki.ichiro@gx-ventures.co.jp",
+    phone: "03-1234-5678"
+  },
   relatedPeople: [
     {
       id: 1,

@@ -5,7 +5,9 @@ import { ActivityInfo } from "@/components/profile/ActivityInfo";
 import { ContactInfo } from "@/components/profile/ContactInfo";
 import { StaffList } from "@/components/profile/StaffList";
 import { RelatedPeople } from "@/components/profile/RelatedPeople";
-import { sampleTalentProfile } from "@/data";
+// データ切り替え用: 以下のどちらかをコメントアウトして使用
+//import { sampleTalentProfile } from "@/data";           // フルデータ版
+import { sampleTalentProfile } from "@/data/index_empty"; // 空データ版（テスト用）
 
 export default function TalentProfilePage() {
   const profile = sampleTalentProfile;

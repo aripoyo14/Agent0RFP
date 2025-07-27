@@ -20,6 +20,7 @@ export function StaffList({ staff }: StaffListProps) {
           id={(member as ContactStaff).id}
           name={(member as ContactStaff).name}
           subtitle={(member as ContactStaff).department}
+          className="list-item--staff"
         />
       )}
     />

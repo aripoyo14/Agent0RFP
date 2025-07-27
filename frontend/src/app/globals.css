@@ -135,6 +135,12 @@ body {
     border-color: var(--brand-primary);
   }
 
+  .list-item--staff {
+    background: var(--brand-bg);
+    border: 1px solid transparent;
+    @apply flex items-start gap-3 p-3 rounded-lg cursor-pointer;
+  }
+
   .company-title {
     color: var(--brand-dark);
     @apply font-semibold;
