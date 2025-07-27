@@ -1,16 +1,16 @@
-import { ContactStaff } from "@/types"
-import { ListCard } from "@/components/ui/list-card"
-import { PersonListItem } from "@/components/ui/person-list-item"
+import { ContactStaff } from "@/types";
+import { ListCard } from "@/components/ui/list-card";
+import { PersonListItem } from "@/components/ui/person-list-item";
 
 interface StaffListProps {
-  staff: ContactStaff[]
+  staff: ContactStaff[];
 }
 
 export function StaffList({ staff }: StaffListProps) {
   return (
     <ListCard
       title="接点職員"
-      icon="groups"
+      icon="group"
       items={staff}
       emptyMessage="接点職員はいません"
       fullHeight={true}
@@ -23,5 +23,5 @@ export function StaffList({ staff }: StaffListProps) {
         />
       )}
     />
-  )
+  );
 }

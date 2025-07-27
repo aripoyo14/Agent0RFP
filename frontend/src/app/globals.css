@@ -89,6 +89,8 @@ body {
     font-feature-settings: "liga";
   }
 
+
+  
   .card-content-padding {
     @apply px-6 pb-6;
   }
@@ -145,7 +147,40 @@ body {
 
   .department-name {
     color: var(--brand-medium-gray);
-    @apply text-sm;
+  }
+
+  /* カスタムスクロールバー */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
+  }
+
+  .custom-scrollbar:hover {
+    scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+  }
+
+  .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background: rgba(156, 163, 175, 0.3);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(156, 163, 175, 0.5);
   }
 
   .person-name {

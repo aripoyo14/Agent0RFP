@@ -10,17 +10,17 @@ export function ContactInfo({ email, phone }: ContactInfoProps) {
     <Card className="profile-card--contact h-full">
       <CardHeader className="card-header-padding">
         <CardTitle className="card-title-base">
-          <span className="material-icon">contact_page</span>
+          <span className="material-symbols-outlined">share</span>
           連絡先
         </CardTitle>
       </CardHeader>
       <CardContent className="card-content-padding space-y-2">
         <div className="flex items-center gap-2 text-secondary">
-          <span className="material-icon icon-contact">email</span>
+          <span className="material-symbols-outlined icon-contact">mail</span>
           {email}
         </div>
         <div className="flex items-center gap-2 text-secondary">
-          <span className="material-icon icon-contact">phone</span>
+          <span className="material-symbols-outlined icon-contact">call</span>
           {phone}
         </div>
       </CardContent>

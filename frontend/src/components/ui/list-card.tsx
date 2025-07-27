@@ -21,14 +21,14 @@ export function ListCard({
   className = "",
   fullHeight = false 
 }: ListCardProps) {
-  const cardClasses = `profile-card ${fullHeight ? 'h-full flex flex-col' : ''} ${className}`
-  const contentClasses = `card-content-padding space-y-3 ${fullHeight ? 'flex-1' : ''}`
+  const cardClasses = `profile-card ${fullHeight ? 'h-full' : ''} ${className}`
+  const contentClasses = fullHeight ? 'relative h-full' : 'card-content-padding'
 
   return (
     <Card className={cardClasses}>
       <CardHeader className="card-header-padding">
         <CardTitle className="card-title-base">
-          <span className="material-icon">{icon}</span>
+          <span className="material-symbols-outlined">{icon}</span>
           {title}
         </CardTitle>
       </CardHeader>
@@ -36,7 +36,10 @@ export function ListCard({
         {items.length === 0 ? (
           <EmptyState message={emptyMessage} />
         ) : (
-          items.map(renderItem)
+          /* ↓↓↓ スクロール対応ラッパー追加 ↓↓↓ */
+          <div className={fullHeight ? 'absolute inset-6 overflow-y-auto space-y-3 pr-4 custom-scrollbar' : 'max-h-[400px] overflow-y-auto space-y-3 pr-2 custom-scrollbar'}>
+            {items.map(renderItem)}
+          </div>
         )}
       </CardContent>
     </Card>

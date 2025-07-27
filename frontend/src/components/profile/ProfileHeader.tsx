@@ -1,13 +1,13 @@
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 
 interface ProfileHeaderProps {
-  name: string
-  skillTags: string[]
+  name: string;
+  skillTags: string[];
 }
 
 export function ProfileHeader({ name, skillTags }: ProfileHeaderProps) {
   return (
-    <div className="profile-header-gradient">
+    <div className="profile-header-gradient h-full">
       <div className="max-w-full">
         <h1 className="text-2xl font-bold mb-4">{name}</h1>
         <div className="flex flex-wrap gap-2">
@@ -22,5 +22,5 @@ export function ProfileHeader({ name, skillTags }: ProfileHeaderProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

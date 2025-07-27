@@ -15,42 +15,41 @@ export default function TalentProfilePage() {
       <div className="h-[160px]">
         <ProfileHeader name={profile.name} skillTags={profile.skillTags} />
       </div>
-      <div className="p-8 h-full">
-        <div className="grid grid-cols-3 gap-4 min-h-[calc(100vh-160px)]">
-          {/* Left Column - Widest */}
-          <div className="grid grid-cols-1 gap-4 h-full">
-            <div className="row-span-3">
-              <CareerInfo
-                currentInfo={profile.currentInfo}
-                pastBusinessCards={profile.pastBusinessCards}
-              />
-            </div>
-            <div className="row-span-9">
-              <Summary records={profile.interviewRecords} />
-            </div>
-          </div>
 
-          {/* Middle Column - Activity Information */}
-          <div className="grid grid-cols-1 gap-4 h-full">
-            <div className="row-span-12">
-              <ActivityInfo activities={profile.activities} />
-            </div>
+      <div className="grid grid-cols-3 gap-4 p-8 min-h-[calc(100vh-160px)] max-h-[calc(100vh-160px)]">
+        {/* Left Column - Widest */}
+        <div className="grid grid-cols-1 gap-4 h-full">
+          <div className="row-span-3">
+            <CareerInfo
+              currentInfo={profile.currentInfo}
+              pastBusinessCards={profile.pastBusinessCards}
+            />
           </div>
+          <div className="row-span-9">
+            <Summary records={profile.interviewRecords} />
+          </div>
+        </div>
 
-          {/* Right Column - Narrowest */}
-          <div className="grid grid-cols-1 gap-4 h-full">
-            <div className="row-span-2">
-              <ContactInfo
-                email={profile.contactInfo.email}
-                phone={profile.contactInfo.phone}
-              />
-            </div>
-            <div className="row-span-5">
-              <StaffList staff={profile.contactStaff} />
-            </div>
-            <div className="row-span-5">
-              <RelatedPeople people={profile.relatedPeople} />
-            </div>
+        {/* Middle Column - Activity Information */}
+        <div className="grid grid-cols-1 gap-4 h-full">
+          <div className="row-span-12">
+            <ActivityInfo activities={profile.activities} />
+          </div>
+        </div>
+
+        {/* Right Column - Narrowest */}
+        <div className="grid grid-cols-1 gap-4 h-full">
+          <div className="row-span-2">
+            <ContactInfo
+              email={profile.contactInfo.email}
+              phone={profile.contactInfo.phone}
+            />
+          </div>
+          <div className="row-span-5">
+            <StaffList staff={profile.contactStaff} />
+          </div>
+          <div className="row-span-5">
+            <RelatedPeople people={profile.relatedPeople} />
           </div>
         </div>
       </div>

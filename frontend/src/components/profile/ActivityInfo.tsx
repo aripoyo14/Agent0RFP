@@ -26,7 +26,7 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
       <CardHeader className="card-header-padding">
         <div className="flex items-center justify-between">
           <CardTitle className="card-title-base">
-            <span className="material-icon">rss_feed</span>
+            <span className="material-symbols-outlined">wifi</span>
             活動情報
           </CardTitle>
           <Button
@@ -35,11 +35,11 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
             className="text-xs px-4 py-1.5 border-blue-300 text-blue-600 hover:bg-blue-50 rounded-full bg-transparent"
             onClick={handleFetchActivities}
           >
-            関連情報を取得する
+            最新情報を取得する
           </Button>
         </div>
       </CardHeader>
-      <CardContent className="card-content-padding space-y-4">
+      <CardContent className="relative h-full">
         {!showActivities ? (
           <div className="flex items-start justify-center pt-4 px-4">
             <div
@@ -54,33 +54,36 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
             <div className="text-sm text-gray-500">活動情報はありません</div>
           </div>
         ) : (
-          activities.map((activity, index) => (
-            <div
-              key={index}
-              className={`p-4 rounded-lg ${getCategoryClass(
-                activity.category
-              )}`}
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Badge className="activity-badge">
-                      {activity.category}
-                    </Badge>
-                    <span className="text-meta">{activity.date}</span>
+          // ↓↓↓ スクロール対応ラッパー追加 ↓↓↓
+          <div className="absolute inset-6 overflow-y-auto space-y-4 pr-4 custom-scrollbar">
+            {activities.map((activity, index) => (
+              <div
+                key={index}
+                className={`p-4 rounded-lg ${getCategoryClass(
+                  activity.category
+                )}`}
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge className="activity-badge">
+                        {activity.category}
+                      </Badge>
+                      <span className="text-meta">{activity.date}</span>
+                    </div>
+                    <p className="text-sm text-gray-800 leading-relaxed">
+                      {activity.title}
+                    </p>
                   </div>
-                  <p className="text-sm text-gray-800 leading-relaxed">
-                    {activity.title}
-                  </p>
-                </div>
-                <div className="bg-white rounded-full px-3 py-1 ml-3 shadow-sm border border-gray-100">
-                  <span className="text-xs text-gray-600">
-                    {activity.details}
-                  </span>
+                  <div className="bg-white rounded-full px-3 py-1 ml-3 shadow-sm border border-gray-100">
+                    <span className="text-xs text-gray-600">
+                      {activity.details}
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
+            ))}
+          </div>
         )}
       </CardContent>
     </Card>
