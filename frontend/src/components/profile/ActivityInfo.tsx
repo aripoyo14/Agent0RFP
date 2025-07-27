@@ -15,11 +15,14 @@ interface ActivityInfoProps {
 }
 
 export function ActivityInfo({ activities }: ActivityInfoProps) {
-  const [showActivities, setShowActivities] = useState(false);
+  const [useEmptyData, setUseEmptyData] = useState(false);
 
-  const handleFetchActivities = () => {
-    setShowActivities(true);
+  // TODO: 将来的にバックエンド実装時に最新の活動情報を取得する機能に変更予定
+  const handleToggleData = () => {
+    setUseEmptyData(!useEmptyData);
   };
+
+  const displayActivities = useEmptyData ? [] : activities;
 
   return (
     <Card className="profile-card h-full">
@@ -33,30 +36,21 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
             variant="outline"
             size="sm"
             className="text-xs px-4 py-1.5 border-blue-300 text-blue-600 hover:bg-blue-50 rounded-full bg-transparent"
-            onClick={handleFetchActivities}
+            onClick={handleToggleData}
           >
-            最新情報を取得する
+            {useEmptyData ? "デモデータに戻す" : "最新情報を取得"}
           </Button>
         </div>
       </CardHeader>
       <CardContent className="relative h-full">
-        {!showActivities ? (
-          <div className="flex items-start justify-center pt-4 px-4">
-            <div
-              className="text-sm text-gray-700 leading-relaxed py-20 bg-gray-50 rounded border border-gray-100 w-full text-center cursor-pointer hover:bg-gray-100 transition-colors duration-200"
-              onClick={handleFetchActivities}
-            >
-              活動情報を取得してください
-            </div>
-          </div>
-        ) : activities.length === 0 ? (
+        {displayActivities.length === 0 ? (
           <div className="flex items-center justify-center pt-8">
-            <div className="text-sm text-gray-500">活動情報はありません</div>
+            <div className="text-sm text-gray-500">活動情報がありません</div>
           </div>
         ) : (
           // ↓↓↓ スクロール対応ラッパー追加 ↓↓↓
           <div className="absolute inset-6 overflow-y-auto space-y-4 pr-4 custom-scrollbar">
-            {activities.map((activity, index) => (
+            {displayActivities.map((activity, index) => (
               <div
                 key={index}
                 className={`p-4 rounded-lg ${getCategoryClass(

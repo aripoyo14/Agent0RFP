@@ -1,28 +1,30 @@
-import { ReactNode } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { EmptyState } from "@/components/ui/empty-state"
+import { ReactNode } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EmptyState } from "@/components/ui/empty-state";
 
 interface ListCardProps {
-  title: string
-  icon: string
-  items: unknown[]
-  emptyMessage: string
-  renderItem: (item: unknown, index: number) => ReactNode
-  className?: string
-  fullHeight?: boolean
+  title: string;
+  icon: string;
+  items: unknown[];
+  emptyMessage: string;
+  renderItem: (item: unknown, index: number) => ReactNode;
+  className?: string;
+  fullHeight?: boolean;
 }
 
-export function ListCard({ 
-  title, 
-  icon, 
-  items, 
-  emptyMessage, 
-  renderItem, 
+export function ListCard({
+  title,
+  icon,
+  items,
+  emptyMessage,
+  renderItem,
   className = "",
-  fullHeight = false 
+  fullHeight = false,
 }: ListCardProps) {
-  const cardClasses = `profile-card ${fullHeight ? 'h-full' : ''} ${className}`
-  const contentClasses = fullHeight ? 'relative h-full' : 'card-content-padding'
+  const cardClasses = `profile-card ${fullHeight ? "h-full" : ""} ${className}`;
+  const contentClasses = fullHeight
+    ? "relative h-full"
+    : "card-content-padding";
 
   return (
     <Card className={cardClasses}>
@@ -32,16 +34,22 @@ export function ListCard({
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent className={contentClasses}>
+      <CardContent className={`${contentClasses} pt-0`}>
         {items.length === 0 ? (
           <EmptyState message={emptyMessage} />
         ) : (
           /* ↓↓↓ スクロール対応ラッパー追加 ↓↓↓ */
-          <div className={fullHeight ? 'absolute inset-6 overflow-y-auto space-y-3 pr-4 custom-scrollbar' : 'max-h-[400px] overflow-y-auto space-y-3 pr-2 custom-scrollbar'}>
+          <div
+            className={
+              fullHeight
+                ? "absolute inset-x-6 top-0 bottom-4 overflow-y-auto space-y-2 pr-4 custom-scrollbar"
+                : "max-h-[400px] overflow-y-auto space-y-2 pr-2 custom-scrollbar"
+            }
+          >
             {items.map(renderItem)}
           </div>
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

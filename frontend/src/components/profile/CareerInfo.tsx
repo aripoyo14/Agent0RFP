@@ -23,9 +23,9 @@ export function CareerInfo({
           経歴情報
         </CardTitle>
       </CardHeader>
-      <CardContent className="relative h-full">
+      <CardContent className="relative h-full pt-0">
         {/* ↓↓↓ スクロール対応ラッパー追加 ↓↓↓ */}
-        <div className="absolute inset-6 overflow-y-auto space-y-4 pr-4 custom-scrollbar">
+        <div className="absolute inset-x-6 top-0 bottom-4 overflow-y-auto space-y-3 pr-4 custom-scrollbar">
           {/* 現在の情報 */}
           <div className="border rounded-lg p-4 bg-blue-50 border-blue-200">
             <div className="flex items-center justify-between mb-3">

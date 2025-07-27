@@ -33,9 +33,9 @@ export function Summary({ records }: SummaryProps) {
           面談記録
         </CardTitle>
       </CardHeader>
-      <CardContent className="relative h-full">
+      <CardContent className="relative h-full pt-0">
         {/* ↓↓↓ スクロール対応ラッパー追加 ↓↓↓ */}
-        <div className="absolute inset-6 overflow-y-auto space-y-4 pr-4 custom-scrollbar">
+        <div className="absolute inset-x-6 top-0 bottom-4 overflow-y-auto space-y-3 pr-4 custom-scrollbar">
           {/* 最新レコードの概要表示 */}
           {latestRecord && (
             <div className="border rounded-lg p-4 bg-blue-50 border-blue-200">

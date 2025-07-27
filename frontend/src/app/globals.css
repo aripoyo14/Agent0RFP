@@ -46,12 +46,12 @@ body {
   }
 
   .card-header-padding {
-    @apply pb-4 px-6 pt-6;
+    @apply pb-2 px-4 pt-4 lg:pb-3 lg:px-6 lg:pt-6;
   }
 
   .card-title-base {
     color: var(--brand-dark);
-    @apply text-base font-medium flex items-center gap-2;
+    @apply text-sm lg:text-base font-medium flex items-center gap-2;
   }
 
   .icon-base {
@@ -89,15 +89,13 @@ body {
     font-feature-settings: "liga";
   }
 
-
-  
   .card-content-padding {
-    @apply px-6 pb-6;
+    @apply px-4 pb-4 lg:px-6 lg:pb-6;
   }
 
   .text-secondary {
     color: var(--brand-medium-gray);
-    @apply text-sm;
+    @apply text-xs lg:text-sm;
   }
 
   .text-meta {
@@ -112,12 +110,12 @@ body {
 
   .list-item-base {
     background: var(--brand-bg);
-    @apply flex items-start gap-3 p-3 rounded-lg;
+    @apply flex items-start gap-2 p-2 lg:gap-3 lg:p-3 rounded-lg;
   }
 
   .list-item--hoverable {
     background: var(--brand-bg);
-    @apply flex items-start gap-3 p-3 rounded-lg transition-colors;
+    @apply flex items-start gap-2 p-2 lg:gap-3 lg:p-3 rounded-lg transition-colors;
   }
 
   .list-item--hoverable:hover {
@@ -127,7 +125,7 @@ body {
   .list-item--interactive {
     background: var(--brand-bg);
     border: 1px solid transparent;
-    @apply flex items-start gap-3 p-3 rounded-lg transition-colors cursor-pointer;
+    @apply flex items-start gap-2 p-2 lg:gap-3 lg:p-3 rounded-lg transition-colors cursor-pointer;
   }
 
   .list-item--interactive:hover {
@@ -138,7 +136,7 @@ body {
   .list-item--staff {
     background: var(--brand-bg);
     border: 1px solid transparent;
-    @apply flex items-start gap-3 p-3 rounded-lg cursor-pointer;
+    @apply flex items-start gap-2 p-2 lg:gap-3 lg:p-3 rounded-lg cursor-pointer;
   }
 
   .company-title {
@@ -215,7 +213,7 @@ body {
 
   .profile-header-gradient {
     background: #007aff;
-    @apply text-white px-12 py-8;
+    @apply text-white px-6 py-4 lg:px-12 lg:py-8;
   }
 
   /* Brand Color Variables */
