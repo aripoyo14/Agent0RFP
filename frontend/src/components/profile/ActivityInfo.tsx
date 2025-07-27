@@ -26,7 +26,7 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
       <CardHeader className="card-header-padding">
         <div className="flex items-center justify-between">
           <CardTitle className="card-title-base">
-            <span className="material-symbols-outlined">wifi</span>
+            <span className="material-symbols-outlined">rss_feed</span>
             活動情報
           </CardTitle>
           <Button

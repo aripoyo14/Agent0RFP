@@ -30,12 +30,6 @@ export function Summary({ records }: SummaryProps) {
       <CardHeader className={STYLES.header.container}>
         <CardTitle className={STYLES.header.title}>
           <span className={STYLES.icon}>description</span>
-          <span
-            className="material-symbols-outlined ml-1"
-            style={{ fontSize: "0.8em" }}
-          >
-            visibility
-          </span>
           面談記録
         </CardTitle>
       </CardHeader>
