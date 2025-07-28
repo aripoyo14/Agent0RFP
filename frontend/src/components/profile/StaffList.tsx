@@ -1,5 +1,6 @@
 import { ContactStaff } from "@/types";
 import { ListCard } from "@/components/ui/list-card";
+import { CardTitleIcon } from "@/components/ui/card-title-icon";
 import { PersonListItem } from "@/components/ui/person-list-item";
 
 interface StaffListProps {
@@ -20,7 +21,7 @@ export function StaffList({ staff }: StaffListProps) {
           id={(member as ContactStaff).id}
           name={(member as ContactStaff).name}
           subtitle={(member as ContactStaff).department}
-          className="list-item--staff"
+          className="list-item-base"
         />
       )}
     />

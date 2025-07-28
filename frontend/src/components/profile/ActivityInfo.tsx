@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
+import { ActivityBadge } from "@/components/ui/activity-badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardTitleIcon } from "@/components/ui/card-title-icon";
 import { Activity, ACTIVITY_CATEGORY_CLASSES } from "@/types";
 
 const getCategoryClass = (category: Activity["category"]) => {
@@ -17,7 +18,7 @@ interface ActivityInfoProps {
 export function ActivityInfo({ activities }: ActivityInfoProps) {
   const [useEmptyData, setUseEmptyData] = useState(false);
 
-  // TODO: 将来的にバックエンド実装時に最新の活動情報を取得する機能に変更予定
+  // TODO: 将来的にバックエンド実装時に最新の活動情報を取得する機能にd変更予定
   const handleToggleData = () => {
     setUseEmptyData(!useEmptyData);
   };
@@ -29,7 +30,7 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
       <CardHeader className="card-header-padding">
         <div className="flex items-center justify-between">
           <CardTitle className="card-title-base">
-            <span className="material-symbols-outlined">rss_feed</span>
+            <CardTitleIcon>rss_feed</CardTitleIcon>
             活動情報
           </CardTitle>
           <Button
@@ -49,27 +50,27 @@ export function ActivityInfo({ activities }: ActivityInfoProps) {
           </div>
         ) : (
           // ↓↓↓ スクロール対応ラッパー追加 ↓↓↓
-          <div className="absolute inset-6 overflow-y-auto space-y-4 pr-4 custom-scrollbar">
+          <div className="absolute inset-3 top-0 overflow-y-auto space-y-2 pr-1.5 custom-scrollbar">
             {displayActivities.map((activity, index) => (
               <div
                 key={index}
-                className={`p-4 rounded-lg ${getCategoryClass(
+                className={`p-2.5 rounded-lg ${getCategoryClass(
                   activity.category
                 )}`}
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <Badge className="activity-badge">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <ActivityBadge className="activity-badge">
                         {activity.category}
-                      </Badge>
+                      </ActivityBadge>
                       <span className="text-meta">{activity.date}</span>
                     </div>
-                    <p className="text-sm text-gray-800 leading-relaxed">
+                    <p className="text-xs text-gray-800 leading-relaxed">
                       {activity.title}
                     </p>
                   </div>
-                  <div className="bg-white rounded-full px-3 py-1 ml-3 shadow-sm border border-gray-100">
+                  <div className="bg-white rounded-full px-2 py-0.5 ml-2 shadow-sm border border-gray-100">
                     <span className="text-xs text-gray-600">
                       {activity.details}
                     </span>

@@ -24,12 +24,12 @@ const STYLES = {
   },
   interviewer: {
     container: "flex items-center gap-2 mb-4",
-    icon: "material-symbols-outlined text-blue-600 text-lg",
+    icon: "material-symbols-outlined text-blue-600 text-sm",
     name: "text-blue-600 font-medium"
   },
   content: {
     header: "flex items-center gap-2 mb-3",
-    icon: "material-symbols-outlined text-gray-500 text-lg",
+    icon: "material-symbols-outlined text-gray-500 text-sm",
     label: "text-gray-600 font-medium",
     text: "text-sm text-gray-700 leading-relaxed p-3 bg-gray-50 rounded border border-gray-100"
   }

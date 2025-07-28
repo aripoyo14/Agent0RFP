@@ -13,14 +13,14 @@ export default function TalentProfilePage() {
   const profile = sampleTalentProfile;
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="h-32 lg:h-40">
+    <div className="bg-gray-50 min-h-screen w-full h-screen overflow-hidden">
+      <div className="h-16 lg:h-20">
         <ProfileHeader name={profile.name} skillTags={profile.skillTags} />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-4 p-4 lg:p-6 min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-10rem)]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-1.5 lg:gap-2 p-2 lg:p-3 h-[calc(100vh-4rem)] lg:h-[calc(100vh-5rem)] overflow-y-auto w-full">
         {/* Left Column - Widest */}
-        <div className="flex flex-col gap-3 lg:gap-4 lg:h-full">
+        <div className="lg:col-span-4 flex flex-col gap-1.5 lg:gap-2 lg:h-full">
           <div className="h-auto lg:h-[40%]">
             <CareerInfo
               currentInfo={profile.currentInfo}
@@ -33,14 +33,14 @@ export default function TalentProfilePage() {
         </div>
 
         {/* Middle Column - Activity Information */}
-        <div className="flex flex-col gap-3 lg:gap-4 lg:h-full">
+        <div className="lg:col-span-5 flex flex-col gap-1.5 lg:gap-2 lg:h-full">
           <div className="h-auto lg:h-full">
             <ActivityInfo activities={profile.activities} />
           </div>
         </div>
 
         {/* Right Column - Narrowest */}
-        <div className="flex flex-col gap-3 lg:gap-4 lg:h-full">
+        <div className="lg:col-span-3 flex flex-col gap-1.5 lg:gap-2 lg:h-full">
           <div className="h-auto lg:h-[20%]">
             <ContactInfo
               email={profile.contactInfo.email}

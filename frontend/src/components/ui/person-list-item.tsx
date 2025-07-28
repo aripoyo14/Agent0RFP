@@ -15,9 +15,9 @@ export function PersonListItem({
 }: PersonListItemProps) {
   return (
     <div key={id} className={className} onClick={onClick}>
-      <div className="flex-1">
+      <div className="flex-1 pl-0">
         <h4 className="person-name">{name}</h4>
-        <p className="text-meta mt-1">{subtitle}</p>
+        <p className="text-meta mt-0.5">{subtitle}</p>
       </div>
     </div>
   )
