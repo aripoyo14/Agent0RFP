@@ -12,11 +12,11 @@ export interface PastBusinessCard {
   title_at_time: string
 }
 
-export interface InterviewRecord {
+export interface MeetingRecord {
   id: number
   date: string
   title: string
-  interviewer: string
+  user: string
   summary: string
   isLatest: boolean
 }
@@ -57,12 +57,12 @@ export const ACTIVITY_CATEGORY_CLASSES = {
   "論文": "activity-category--paper",
 } as const
 
-export interface TalentProfile {
+export interface ExpertProfile {
   name: string
   skillTags: string[]
   currentInfo: CurrentInfo
   pastBusinessCards: PastBusinessCard[]
-  interviewRecords: InterviewRecord[]
+  meetingRecords: MeetingRecord[]
   activities: Activity[]
   contactStaff: ContactStaff[]
   relatedPeople: RelatedPerson[]

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardTitleIcon } from "@/components/ui/card-title-icon";
 import { EmptyState } from "@/components/ui/empty-state";
 
 interface ListCardProps {
@@ -30,7 +31,7 @@ export function ListCard({
     <Card className={cardClasses}>
       <CardHeader className="card-header-padding">
         <CardTitle className="card-title-base">
-          <span className="material-symbols-outlined">{icon}</span>
+          <CardTitleIcon>{icon}</CardTitleIcon>
           {title}
         </CardTitle>
       </CardHeader>
@@ -42,8 +43,8 @@ export function ListCard({
           <div
             className={
               fullHeight
-                ? "absolute inset-x-6 top-0 bottom-4 overflow-y-auto space-y-2 pr-4 custom-scrollbar"
-                : "max-h-[400px] overflow-y-auto space-y-2 pr-2 custom-scrollbar"
+                ? "absolute inset-x-3 top-0 bottom-1.5 overflow-y-auto space-y-1.5 pr-1.5 custom-scrollbar"
+                : "max-h-[400px] overflow-y-auto space-y-1.5 pr-1.5 custom-scrollbar"
             }
           >
             {items.map(renderItem)}
