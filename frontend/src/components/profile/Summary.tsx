@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CardTitleIcon } from "@/components/ui/card-title-icon";
-import { InterviewRecord } from "@/types";
+import { MeetingRecord } from "@/types";
 
 // 共通スタイル定数
 const STYLES = {
@@ -18,7 +18,7 @@ const STYLES = {
 };
 
 interface SummaryProps {
-  records: InterviewRecord[];
+  records: MeetingRecord[];
 }
 
 export function Summary({ records }: SummaryProps) {
@@ -51,14 +51,14 @@ export function Summary({ records }: SummaryProps) {
               <h3 className="text-gray-900 font-medium text-sm mb-2">
                 {latestRecord.title}
               </h3>
-                              <div className="flex items-center gap-1.5 mb-2">
-                  <span className="material-symbols-outlined text-blue-600 text-xs">
-                    person
-                  </span>
-                  <span className="text-blue-600 font-medium text-xs">
-                    {latestRecord.interviewer}
-                  </span>
-                </div>
+              <div className="flex items-center gap-1.5 mb-2">
+                <span className="material-symbols-outlined text-blue-600 text-xs">
+                  person
+                </span>
+                <span className="text-blue-600 font-medium text-xs">
+                  {latestRecord.user}
+                </span>
+              </div>
               <div className="text-xs text-gray-700 leading-relaxed p-2 bg-gray-50 rounded border border-gray-100">
                 <div className="flex items-center gap-1.5 mb-1.5">
                   <span className="material-symbols-outlined text-gray-500 text-xs">
@@ -93,7 +93,7 @@ export function Summary({ records }: SummaryProps) {
                     person
                   </span>
                   <span className="text-blue-600 font-medium text-xs">
-                    {record.interviewer}
+                    {record.user}
                   </span>
                 </div>
                 <div className="text-xs text-gray-700 leading-relaxed p-2 bg-gray-50 rounded border border-gray-100">

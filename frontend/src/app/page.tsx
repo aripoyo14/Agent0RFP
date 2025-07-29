@@ -6,11 +6,11 @@ import { ContactInfo } from "@/components/profile/ContactInfo";
 import { StaffList } from "@/components/profile/StaffList";
 import { RelatedPeople } from "@/components/profile/RelatedPeople";
 // データ切り替え用: 以下のどちらかをコメントアウトして使用
-import { sampleTalentProfile } from "@/data"; // フルデータ版
-//import { sampleTalentProfile } from "@/data/index_empty"; // 空データ版（テスト用）
+//import { sampleExpertProfile } from "@/data"; // フルデータ版
+import { sampleExpertProfile } from "@/data/index_empty"; // 空データ版（テスト用）
 
-export default function TalentProfilePage() {
-  const profile = sampleTalentProfile;
+export default function ExpertProfilePage() {
+  const profile = sampleExpertProfile;
 
   return (
     <div className="bg-gray-50 min-h-screen w-full h-screen overflow-hidden">
@@ -28,7 +28,7 @@ export default function TalentProfilePage() {
             />
           </div>
           <div className="h-auto lg:h-[60%] lg:flex-1">
-            <Summary records={profile.interviewRecords} />
+            <Summary records={profile.meetingRecords} />
           </div>
         </div>
 

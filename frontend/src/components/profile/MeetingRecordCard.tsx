@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge"
-import { InterviewRecord } from "@/types"
+import { MeetingRecord } from "@/types"
 
 // 共通スタイル定数
 const STYLES = {
@@ -22,7 +22,7 @@ const STYLES = {
     badge: "bg-blue-600 text-white border-0 px-3 py-1 text-xs font-medium rounded-md mb-3",
     text: "text-gray-900 font-medium text-base leading-relaxed"
   },
-  interviewer: {
+  user: {
     container: "flex items-center gap-2 mb-4",
     icon: "material-symbols-outlined text-blue-600 text-sm",
     name: "text-blue-600 font-medium"
@@ -35,11 +35,11 @@ const STYLES = {
   }
 }
 
-interface InterviewRecordCardProps {
-  record: InterviewRecord
+interface MeetingRecordCardProps {
+  record: MeetingRecord
 }
 
-export function InterviewRecordCard({ record }: InterviewRecordCardProps) {
+export function MeetingRecordCard({ record }: MeetingRecordCardProps) {
   const cardClassName = `${STYLES.card.base} ${
     record.isLatest ? STYLES.card.latest : STYLES.card.regular
   }`
@@ -64,10 +64,10 @@ export function InterviewRecordCard({ record }: InterviewRecordCardProps) {
         <h3 className={STYLES.title.text}>{record.title}</h3>
       </div>
 
-      {/* Interviewer */}
-      <div className={STYLES.interviewer.container}>
-        <span className={STYLES.interviewer.icon}>person</span>
-        <span className={STYLES.interviewer.name}>{record.interviewer}</span>
+      {/* User */}
+      <div className={STYLES.user.container}>
+        <span className={STYLES.user.icon}>person</span>
+        <span className={STYLES.user.name}>{record.user}</span>
       </div>
 
       {/* Content Header */}
